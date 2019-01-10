@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # N O * 以外の文字列が入ってたら対応しない
 # 答えが複数あるような文字列は対象外
+# 回文に出来ない場合もある
 
 require './kaibun'
 describe "String#to_my_kaibun" do
