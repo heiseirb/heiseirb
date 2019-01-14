@@ -4,7 +4,7 @@
 # 回文に出来ない場合もある
 
 require './kaibun'
-describe "String#to_my_kaibun" do
+describe "String#to_kaibun" do
   it{ expect( 'geasd'.to_kaibun ).to eq('対応していません') }
   it{ expect( 'NOON'.to_kaibun ).to eq('NOON') }
   it{ expect( 'NO*ON'.to_kaibun ).to eq('対応していません') }
