@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 require './eto'
 describe "Integer#to_eto" do
   it {expect(0.to_eto).to eq('申')}
