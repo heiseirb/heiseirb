@@ -1,17 +1,30 @@
 class String
   def to_kaibun
-    return '対応していません' if self.delete('NO*').size > 0
-    return '対応していません' if self.delete('*').size == 0
-    rev = self.reverse
+    target = self.dup
+    return '対応していません' if including_unexpected_char? || only_wildcard?
 
-    return self if self == rev && !self.include?('*')
-    return '回文には出来ません' unless self.include?('*')
-    self.each_char.with_index do |c, i|
+    rev = target.reverse
+    return target if already_palindrome?
+    return '回文には出来ません' unless target.include?('*')
+    target.each_char.with_index do |c, i|
       return '対応していません' if c == '*' && rev[i] == '*'
-      self[i] = rev[i] if c == '*'
+      target[i] = rev[i] if c == '*'
     end
-   return '対応していません' if self.include?('*')
+    return '対応していません' if target.include?('*')
+    target
+  end
 
-    self
+  private
+
+  def including_unexpected_char?
+    self.delete('NO*').size > 0
+  end
+
+  def only_wildcard?
+    self.delete('*').size == 0
+  end
+
+  def already_palindrome?
+    self == self.reverse && !self.include?('*')
   end
 end
