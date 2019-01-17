@@ -8,11 +8,11 @@ class Integer
 
   def validate
     if self.class != Integer
-      puts "数値を入力してください"
+      "数値を入力してください"
     elsif self < 0
-      puts "0以上の値を入力してください"
+      "0以上の値を入力してください"
     elsif /\d{11,}/.match(self.to_s)
-      puts "桁数が多すぎます"
+      "桁数が多すぎます"
     end
   end
 end
