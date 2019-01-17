@@ -9,9 +9,18 @@ class String
     end
     return self if self == self.reverse
 
+    kaibun = self.replace_asterisk
+    return kaibun if kaibun == kaibun.reverse
+    while kaibun != kaibun.reverse do
+      kaibun = kaibun.replace_asterisk
+    end
+    kaibun
+  end
+
+  def replace_asterisk
     index = self.index("*")
-    count = self.scan(/\*/).count
+    count = self.scan(/\*+/).first.length
     replacer = self.reverse.chars.to_a[index..(index + count - 1)].join("")
-    self.sub((self.scan(/\*/).join("")), replacer)
+    self.sub(self.scan(/\*+/).first, replacer)
   end
 end
