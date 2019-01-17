@@ -1,9 +1,11 @@
 class String
   def to_kaibun
-    return "回文には出来ません" if /NONN/.match(self) # ????
     return "対応していません" if
       /^\*+$/.match(self) ||
-      (!/\*/.match(self) && self != self.reverse)
+      (!/\*/.match(self) && self != self.reverse && !/(N|O|\*)/.match(self))
+    return "対応していません" if
+      /^((?!N).)*$/.match(self) && /^((?!O).)*$/.match(self) && /^((?!\*).)*$/.match(self)
+    return "回文には出来ません" if (!/\*/.match(self) && self != self.reverse)
     if self.length % 2 == 1
       return "対応していません" if self.chars.to_a[self.length / 2] == "*"
     end
