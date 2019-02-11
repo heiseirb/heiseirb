@@ -5,7 +5,7 @@ bundle install
 ```
 - specをクリアするように実装する
 ```
-bundle exec rspec ./spec     
+bundle exec rspec spec/*  
 ```
 # 注意
 - テストがどこまでクリアできるかや実装が意味のあるものかに関してが評価対象です
