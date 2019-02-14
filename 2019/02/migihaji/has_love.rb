@@ -17,7 +17,12 @@ class HasLove
     raise OutOfRangeError if left > 20 || right > 20 || top > 10 || bottom > 10
     raise InvalidRangeError if top > bottom || left > right
 
-   pp @chars
+    count = 1
+    chars = @chars[top-1..bottom]
+    slices = chars.map do |line|
+      line[left-1..right]
+    end
 
+    return true
   end
 end
