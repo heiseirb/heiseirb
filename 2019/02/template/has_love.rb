@@ -9,6 +9,7 @@ class HasLove
     end_col -= 1
     start_row -= 1
     end_row -= 1
+    raise OutOfRangeError if end_col >= 20 || end_row >= 20
     raise InvalidRangeError if start_col > end_col || start_row > end_row
 
     rows = @arr[start_col..end_col]
