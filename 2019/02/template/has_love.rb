@@ -1,5 +1,4 @@
 require_relative ('./error.rb')
-require "pry"
 class HasLove
   def initialize(sentence:)
     @arr = sentence.split("\n").map(&:chars)
