@@ -23,6 +23,9 @@ class HasLove
       line[left-1..right]
     end
 
-    return true
+    slices.any? { |chars|
+      chars.join('').include?('LOVE')
+    }
+
   end
 end
