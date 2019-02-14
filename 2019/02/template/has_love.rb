@@ -9,6 +9,8 @@ class HasLove
     end_col -= 1
     start_row -= 1
     end_row -= 1
+    raise InvalidRangeError if start_col > end_col || start_row > end_row
+
     rows = @arr[start_col..end_col]
     rows = rows.map{|row| row[start_row..end_row]}
     rows.each do |row|
