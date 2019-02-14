@@ -1,5 +1,5 @@
+require_relative ('./error.rb')
 require "pry"
-
 class HasLove
   def initialize(sentence:)
     @arr = sentence.split("\n").map(&:chars)
@@ -9,8 +9,18 @@ class HasLove
     end_col -= 1
     start_row -= 1
     end_row -= 1
-    rows = @arr[start_row..end_row]
-    rows.map{|row| row[start_col..end_col]}
-    binding.pry
+    rows = @arr[start_col..end_col]
+    rows = rows.map{|row| row[start_row..end_row]}
+    rows.each do |row|
+      return true if row.join('').match("LOVE")
+    end
+    (end_col - start_col).times do |i|
+      str = ''
+      rows.map do |row|
+        str += row[i]
+      end
+      return true if str.match("LOVE")
+    end
+    false
   end
 end
