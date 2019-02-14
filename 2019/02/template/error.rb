@@ -1,0 +1,2 @@
+class NecessaryValueError < StandardError
+end
