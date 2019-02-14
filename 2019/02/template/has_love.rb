@@ -1,5 +1,5 @@
 class HasLove
-  def initialize(sentence:)
+  def initialize
   end
   def find
   end
