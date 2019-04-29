@@ -1,20 +1,17 @@
 module Enumerable
-  undef find
-  def find; end
+  def my_each; end
 
-  # undef map
-  # def map; end
+  def my_find; end
 
-  undef each_with_object
-  def each_with_object; end
+  def my_map; end
 
-  # undef group_by
-  # def group_by; end
+  def my_each_with_object(arg); end
+
+  def my_group_by; end
 
   def tally; end
 end
 
 class Array
-  undef zip
-  def zip; end
+  def my_zip(*args); end
 end
