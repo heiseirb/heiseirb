@@ -43,7 +43,7 @@ class MyEnumerableTest < MiniTest::Test
     str = ''
     my_str = ''
     arr1.zip(arr2, arr3) { |a| str += "・#{a.join(":")}" }
-    arr1.my_zip(arr2, arr3) { |a| str += "・#{a.join(":")}" }
+    arr1.my_zip(arr2, arr3) { |a| my_str += "・#{a.join(":")}" }
     assert_equal '・1:4:6・2:5:7・3::8', str
     assert_equal '・1:4:6・2:5:7・3::8', my_str
   end
