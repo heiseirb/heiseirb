@@ -21,7 +21,6 @@ class MyEnumerableTest < MiniTest::Test
   end
 
   # https://ref.xaio.jp/ruby/classes/enumerable/collect
-  # minitestが壊れるので勇気あるものは挑め
   def test_map
     skip
     assert_equal [1, 2, 3].map { |i| i ** 2 }, [1, 2, 3].my_map { |i| i ** 2 }
@@ -56,7 +55,6 @@ class MyEnumerableTest < MiniTest::Test
   end
 
   # https://ref.xaio.jp/ruby/classes/enumerable/group_by
-  # minitestが壊れるので勇気あるものは挑め
   def test_group_by
     skip
     assert_equal([0, 1, 2].group_by(&:itself), [0, 1, 2].my_group_by(&:itself))
