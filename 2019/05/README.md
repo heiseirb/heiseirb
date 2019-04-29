@@ -2,7 +2,7 @@
 - templateと同じ階層にチーム用のフォルダを作ってそこで作業する
 - minitestをクリアするように実装する
 ```
-ruby my_enumerable_test.rb  
+make test
 ```
 # 注意
 - テストがどこまでクリアできるかや実装が意味のあるものかに関してが評価対象です
