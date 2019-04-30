@@ -3,7 +3,7 @@ module Enumerable
   # forとかwhileでやってみてね。
   def my_each; end
 
-  # 下記問題はeachの使用は禁止。my_eachとかreduceはいいよん
+  # 下記問題、eachの使用は禁止。my_eachとかreduceはいいよん
   def my_find(arg); end
 
   def my_map(arg); end
