@@ -7,7 +7,7 @@ class MyEnumerableTest < MiniTest::Test
     each_items = []
     my_each_items = []
     list.each { |element| each_items << element * 2 }
-    list.each { |element| my_each_items << element * 2 }
+    list.my_each { |element| my_each_items << element * 2 }
     assert_equal my_each_items, each_items
   end
 
