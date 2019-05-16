@@ -22,7 +22,6 @@ class MyEnumerableTest < MiniTest::Test
 
   # https://ref.xaio.jp/ruby/classes/enumerable/collect
   def test_map
-    skip
     assert_equal [1, 2, 3].map { |i| i ** 2 }, [1, 2, 3].my_map { |i| i ** 2 }
     assert_equal [1, 2, 3].map(&:to_s), [1, 2, 3].my_map(&:to_s)
   end
@@ -49,7 +48,6 @@ class MyEnumerableTest < MiniTest::Test
 
   # https://ref.xaio.jp/ruby/classes/enumerable/each_with_object
   def test_each_with_object
-    skip
     assert_equal (1..5).each_with_object([]) { |i, a| a << i * 2 }, (1..5).my_each_with_object([]) { |i, a| a << i * 2 }
     assert_equal %w(a li ce).each_with_object('Hello, ') { |str, memo| memo << str.upcase }, %w(a li ce).my_each_with_object('Hello, ') { |str, memo| memo << str.upcase }
   end
