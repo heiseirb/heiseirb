@@ -14,6 +14,7 @@ class MyEnumerableTest < MiniTest::Test
 
   # https://ref.xaio.jp/ruby/classes/enumerable/find
   def test_find
+    skip
     assert_equal (1..100).find { |i| i % 5 == 0 && i % 7 == 0 }, (1..100).my_find { |i| i % 5 == 0 && i % 7 == 0 }
     not_found = -> { 'NOT FOUND' }
     assert_equal (1..100).find(not_found) { |i| i % 5 == 0 && i % 7 == 0 }, (1..100).my_find(not_found) { |i| i % 5 == 0 && i % 7 == 0 }
@@ -64,7 +65,6 @@ class MyEnumerableTest < MiniTest::Test
   # https://medium.com/@baweaver/ruby-2-7-enumerable-tally-a706a5fb11ea
   # 2.7.0で出るやつだよ
   def test_tally
-    skip
     assert_equal({ 1 => 3, 10 => 2, 100 => 4}, [1, 10, 100, 100, 10, 1, 100, 1, 100].tally)
   end
 end
