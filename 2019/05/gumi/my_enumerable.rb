@@ -1,4 +1,4 @@
-require 'pry'
+#require 'pry'
 
 module Enumerable
   # eachを独自実装しよう！！！
@@ -10,7 +10,6 @@ module Enumerable
   end
 
   # 下記問題、eachの使用は禁止。my_eachとかreduceはいいよん
-  # [1,2,3,4,5].my_find {|n| n==3} 3
   def my_find(&block)
     result = []
     self.my_each do |n|
@@ -25,11 +24,14 @@ module Enumerable
     end
   end
 
+  # a.my_map {|n| n*2} 2,4,6,8
   def my_map(&block)
+    result = []
     for e in self
       # ちがう
-      self[index(e)] = yield(e)
+      result << yield(e)
     end
+    result
   end
 
   def my_each_with_object(arg)
