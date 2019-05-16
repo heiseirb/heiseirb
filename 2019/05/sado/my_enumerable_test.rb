@@ -50,7 +50,6 @@ class MyEnumerableTest < MiniTest::Test
 
   # https://ref.xaio.jp/ruby/classes/enumerable/each_with_object
   def test_each_with_object
-    skip
     assert_equal (1..5).each_with_object([]) { |i, a| a << i * 2 }, (1..5).my_each_with_object([]) { |i, a| a << i * 2 }
     assert_equal %w(a li ce).each_with_object('Hello, ') { |str, memo| memo << str.upcase }, %w(a li ce).my_each_with_object('Hello, ') { |str, memo| memo << str.upcase }
   end
@@ -65,6 +64,7 @@ class MyEnumerableTest < MiniTest::Test
   # https://medium.com/@baweaver/ruby-2-7-enumerable-tally-a706a5fb11ea
   # 2.7.0で出るやつだよ
   def test_tally
+    skip
     assert_equal({ 1 => 3, 10 => 2, 100 => 4}, [1, 10, 100, 100, 10, 1, 100, 1, 100].tally)
   end
 end

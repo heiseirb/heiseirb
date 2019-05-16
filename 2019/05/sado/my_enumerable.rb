@@ -24,7 +24,15 @@ module Enumerable
     arr
   end
 
-  def my_each_with_object(arg); end
+  def my_each_with_object(arr);
+    i = 0
+    while i < self.to_a.length do
+      p arr
+      ele =  self.to_a[i]
+      p yield(ele)
+    end
+    arr
+  end
 
   def my_group_by(arg); end
 
