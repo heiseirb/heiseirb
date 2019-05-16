@@ -22,7 +22,20 @@ module Enumerable
 
   def my_group_by(arg); end
 
-  def tally; end
+  def tally(&block)
+    hash = {}
+    for v in self
+      key = block.call(v)
+      hash[key] =
+          if hash[key].nil?
+            0
+          else
+            hash[key] + 1
+          end
+    end
+    hash
+  end
+
 end
 
 class Array
