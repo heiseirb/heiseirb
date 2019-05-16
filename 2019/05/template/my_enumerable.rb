@@ -1,7 +1,15 @@
+require 'byebug'
 module Enumerable
   # eachを独自実装しよう！！！
   # forとかwhileでやってみてね。
-  def my_each; end
+  def my_each(&block)
+    index = 0
+    while self.size > index do
+      yield self[index]
+
+      index += 1
+    end
+  end
 
   # 下記問題、eachの使用は禁止。my_eachとかreduceはいいよん
   def my_find(arg); end

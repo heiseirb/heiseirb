@@ -8,7 +8,7 @@ class MyEnumerableTest < MiniTest::Test
     my_each_items = []
     list.each { |element| each_items << element * 2 }
     list.my_each { |element| my_each_items << element * 2 }
-    assert_equal my_each_items, each_items
+    assert_equal each_items, my_each_items
   end
 
   # https://ref.xaio.jp/ruby/classes/enumerable/find
