@@ -25,13 +25,11 @@ module Enumerable
   def tally(&block)
     hash = {}
     for v in self
-      key = block.call(v)
-      hash[key] =
-          if hash[key].nil?
-            0
-          else
-            hash[key] + 1
-          end
+      hash[v] = if hash[v].nil?
+                  1
+                else
+                  hash[v] + 1
+                end
     end
     hash
   end
