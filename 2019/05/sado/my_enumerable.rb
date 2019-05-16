@@ -27,9 +27,9 @@ module Enumerable
   def my_each_with_object(arr);
     i = 0
     while i < self.to_a.length do
-      p arr
       ele =  self.to_a[i]
-      p yield(ele)
+      yield(ele, arr)
+      i += 1
     end
     arr
   end
