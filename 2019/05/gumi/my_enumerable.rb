@@ -14,7 +14,10 @@ module Enumerable
   end
 
   def my_map(&block)
-    binding.pry
+    for e in self
+      # ちがう
+      self[index(e)] = yield(e)
+    end
   end
 
   def my_each_with_object(arg)
@@ -31,5 +34,3 @@ class Array
   def my_zip(*args, &block)
   end
 end
-
-[1, 3, 2].my_map { |e| p e }
