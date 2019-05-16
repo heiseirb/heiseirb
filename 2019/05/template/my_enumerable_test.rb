@@ -13,7 +13,6 @@ class MyEnumerableTest < MiniTest::Test
 
   # https://ref.xaio.jp/ruby/classes/enumerable/find
   def test_find
-    skip
     assert_equal (1..100).find { |i| i % 5 == 0 && i % 7 == 0 }, (1..100).my_find { |i| i % 5 == 0 && i % 7 == 0 }
     not_found = -> { 'NOT FOUND' }
     assert_equal (1..100).find(not_found) { |i| i % 5 == 0 && i % 7 == 0 }, (1..100).my_find(not_found) { |i| i % 5 == 0 && i % 7 == 0 }
