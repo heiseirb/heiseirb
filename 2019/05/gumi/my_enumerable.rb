@@ -10,7 +10,19 @@ module Enumerable
   end
 
   # 下記問題、eachの使用は禁止。my_eachとかreduceはいいよん
-  def my_find(arg)
+  # [1,2,3,4,5].my_find {|n| n==3} 3
+  def my_find(&block)
+    result = []
+    self.my_each do |n|
+      if yield(n)
+        result <<  n
+      end
+    end
+    if result == []
+      return nil
+    else
+      result.first
+    end
   end
 
   def my_map(&block)
