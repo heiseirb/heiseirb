@@ -1,7 +1,15 @@
 module Enumerable
   # eachを独自実装しよう！！！
   # forとかwhileでやってみてね。
-  def my_each; end
+  def my_each（&block）
+  #  レシーバの数分繰り返す
+    for element in self do
+  # 受けっとったブロックの処理をする
+      &block
+    end
+
+  
+  end
 
   # 下記問題、eachの使用は禁止。my_eachとかreduceはいいよん
   def my_find(arg); end
