@@ -18,7 +18,7 @@
 
 ## APIに関して
 ### 説明
- - イベント管理が出来る簡単なRails APIです。
+ - イベント管理が出来る簡単なRails APIです。細かい使用は[ソースコード](https://github.com/heiseirb/event_api)を読んでね
  - テーブル設計
    - user(owner) has_many events
    - event has_many event_schedules
@@ -28,7 +28,8 @@
  - API RequestのHeaderには指定のtokenを入れて下さい。
 ```
  - endpoint: https://heiseirb-demo-api.herokuapp.com
-- header:
+ - code: https://github.com/heiseirb/event_api
+ - header:
   - X-Token: 4D6(E7{zeeKkfu;
   - X-TokenSecret: password
 ```
