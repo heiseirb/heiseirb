@@ -22,7 +22,7 @@ module HeiseirbApiClient
 
     def get_users(page = 1)
       response = @conn.get do |req|
-        req.url '/users'
+        req.url '/client/users'
         req.headers = HEADRS
         req.params['page'] = page
       end
