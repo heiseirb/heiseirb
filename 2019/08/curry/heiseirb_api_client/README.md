@@ -41,3 +41,15 @@ The gem is available as open source under the terms of the [MIT License](https:/
 ## Code of Conduct
 
 Everyone interacting in the HeiseirbApiClient project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/heiseirb_api_client/blob/master/CODE_OF_CONDUCT.md).
+
+## API仕様
+みんなをカレー好きにするAPI
+
+- create_user
+ユーザを作成すると語尾に「カレー大好き」がつく。
+
+- every_body_user_love_curry
+すべてのユーザをカレー好きにする。
+
+- edit_user_curry
+あるユーザをカレー好きにする。
