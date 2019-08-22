@@ -10,31 +10,33 @@ Add this line to your application's Gemfile:
 
 ```ruby
 gem 'heiseirb_api_client'
-```
-
 And then execute:
-
-    $ bundle
-
+   $ bundle
 Or install it yourself as:
-
-    $ gem install heiseirb_api_client
+   $ gem install heiseirb_api_client
+```
 
 ## Usage
 
 ```ruby
-# HeiseirbApiClient::Example#get_user(user_id)
 
+HeiseirbApiClient::CRUD::User#get_user(user_id)
 #=> User(name:, email:, password, :role)
- 
+
+HeiseirbApiClient::CRUD::Event.new.post_events(user_id: 136, place: "medpeer", description: "happy hack!", start_date: "2019-08-22", capacity: 10000, times: 1)
 ```
 
+- user_id: string or integer, owner user id
+- place: only string value, where event are held.
+- description: only string value. what kind of event.
+- start_date: string date. format like ‘yyyy-mm-dd’.
+- capacity: only integer. How many people are able to join this event.
+- times: only integer. limited from 1 to 10.
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+After checking out the repo, run bin/setup to install dependencies. Then, run rake spec to run the tests. You can also run bin/console for an interactive prompt that will allow you to experiment.
+To install this gem onto your local machine, run bundle exec rake install. To release a new version, update the version number in version.rb, and then run bundle exec rake release, which will create a git tag for the version, push git commits and tags, and push the .gem file to [rubygems.org](https://rubygems.org).
 
 ## Contributing
 
