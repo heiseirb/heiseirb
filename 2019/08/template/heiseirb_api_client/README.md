@@ -36,6 +36,20 @@ HeiseirbApiClient::Ippaiyoyaku.new.ippaiyoyaku(yoyaku_count: 1000000000)
 HeiseirbApiClient::Ippaiyoyaku.new.ippaiyoyaku(event_schedule_id: 13)
 ```
 
+いっぱい当選できるよ
+デフォルトでid:2532のスケジュールに対して、10回当選をするよ！
+```
+HeiseirbApiClient::Ippaiyoyaku.new.ippaitosen
+```
+予約回数を変えたい場合は、tosen_countを引数に渡してね！
+```
+HeiseirbApiClient::Ippaiyoyaku.new.ippaitosen(tosen_count: 1000000000)
+```
+当選するイベントを指定する場合は、event_schedule_idを引数に渡してね！
+```
+HeiseirbApiClient::Ippaiyoyaku.new.ippaitosen(event_schedule_id: 13)
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
