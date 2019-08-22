@@ -22,7 +22,19 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: ここに使い方を書いて発表してね
+抽選の申し込みをいっぱいできるよ
+デフォルトでid:2532のスケジュールに対して、10回予約をするよ！
+```
+HeiseirbApiClient::Ippaiyoyaku.new.ippaiyoyaku
+```
+予約回数を変えたい場合は、yoyaku_countを引数に渡してね！
+```
+HeiseirbApiClient::Ippaiyoyaku.new.ippaiyoyaku(yoyaku_count: 1000000000)
+```
+予約するイベントを指定する場合は、event_schedule_idを引数に渡してね！
+```
+HeiseirbApiClient::Ippaiyoyaku.new.ippaiyoyaku(event_schedule_id: 13)
+```
 
 ## Development
 
