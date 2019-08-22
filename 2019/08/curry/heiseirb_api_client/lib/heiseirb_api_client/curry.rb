@@ -65,16 +65,24 @@ module HeiseirbApiClient
     end
 
     def every_body_user_love_curry
-      pages = 1 
-      users = get_users(pages)
-      users["data"].each do |user|
-        id   = user["id"]
-        attributes = user['attributes']
-        name = attributes["name"]
-        email = attributes['email']
-        role = attributes['role']
-        edit_user_curry(id, name, email, role, 'ILoveCurry')
-      end
+      page = 1
+      while true do
+        response = get_users(page)
+        data = response["data"]
+
+        break if data.empty?
+
+        data.each do |user|
+          id   = user["id"]
+          attributes = user['attributes']
+          name = attributes["name"]
+          email = attributes['email']
+          role = attributes['role']
+          edit_user_curry(id, name, email, role, 'ILoveCurry')
+        end
+
+        page += 1
+        end
     end
 
     def edit_user_curry(id, name, email, role, password)
