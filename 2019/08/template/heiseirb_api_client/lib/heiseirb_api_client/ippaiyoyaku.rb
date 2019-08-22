@@ -29,8 +29,8 @@ module HeiseirbApiClient
       end
     end
 
-    def ippaitosen(tosen_count: 10, event_schedule_id: 2532)
-      tosen_count.times do
+    def ippaimoushikomi(moushikomi_count: 10, event_schedule_id: 2532)
+      moushikomi_count.times do
         @conn.post do |req|
           req.url "/client/event_schedules/#{event_schedule_id}/apply"
           req.headers = HEADRS

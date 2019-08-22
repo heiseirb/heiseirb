@@ -36,16 +36,16 @@ HeiseirbApiClient::Ippaiyoyaku.new.ippaiyoyaku(yoyaku_count: 1000000000)
 HeiseirbApiClient::Ippaiyoyaku.new.ippaiyoyaku(event_schedule_id: 13)
 ```
 
-いっぱい当選できるよ
-デフォルトでid:2532のスケジュールに対して、10回当選をするよ！
+いっぱい申し込みできるよ
+デフォルトでid:2532のスケジュールに対して、10回申し込みするよ！
 ```
 HeiseirbApiClient::Ippaiyoyaku.new.ippaitosen
 ```
-予約回数を変えたい場合は、tosen_countを引数に渡してね！
+申し込み回数を変えたい場合は、tosen_countを引数に渡してね！
 ```
 HeiseirbApiClient::Ippaiyoyaku.new.ippaitosen(tosen_count: 1000000000)
 ```
-当選するイベントを指定する場合は、event_schedule_idを引数に渡してね！
+申し込みするイベントを指定する場合は、event_schedule_idを引数に渡してね！
 ```
 HeiseirbApiClient::Ippaiyoyaku.new.ippaitosen(event_schedule_id: 13)
 ```
