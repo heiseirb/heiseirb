@@ -22,7 +22,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: ここに使い方を書いて発表してね
+```ruby
+# HeiseirbApiClient::Example#get_user(user_id)
+
+#=> User(name:, email:, password, :role)
+ 
+```
+
 
 ## Development
 
