@@ -2,31 +2,12 @@ require "heiseirb_api_client/core"
 
 module HeiseirbApiClient
   class Curry < Core
-    
     def initialize
       @conn = Faraday.new(url: URL)  do |config|
         config.request :json
         config.response :json
         config.adapter Faraday.default_adapter
       end
-    end
-
-    def get_events(page = 1)
-      response = @conn.get do |req|
-        req.url '/client/events'
-        req.headers = HEADRS
-        req.params['page'] = page
-      end
-      response.body
-    end
-
-    def get_users(page = 1)
-      response = @conn.get do |req|
-        req.url '/client/users'
-        req.headers = HEADRS
-        req.params['page'] = page
-      end
-      response.body
     end
 
     def create_user(name, email, role, password)
