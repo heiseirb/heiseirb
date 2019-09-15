@@ -8,7 +8,7 @@ RSpec.describe HeiseirbApiClient do
     let(:user_id) { 1 }
 
     subject do
-      client = HeiseirbApiClient::SimilarUser.new
+      client = HeiseirbApiClient::CRUD::User.new
       client.similar_users(user_id)
     end
     it do
