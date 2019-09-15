@@ -6,8 +6,8 @@ require "heiseirb_api_client/version"
 Gem::Specification.new do |spec|
   spec.name          = "heiseirb_api_client"
   spec.version       = HeiseirbApiClient::VERSION
-  spec.authors       = ["Yuriko", "cobafan"]
-  spec.email         = ["vacation@gmail.com"]
+  spec.authors       = ['heiseirb']
+  spec.email         = ["g4160hc@gmail.com"]
 
   spec.summary       = '平成.rbのRails API に対するWrapper gemです。'
   spec.description   = 'これを元にgemを作ってみましょう'
