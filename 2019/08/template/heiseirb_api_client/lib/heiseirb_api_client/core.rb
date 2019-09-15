@@ -8,7 +8,7 @@ module HeiseirbApiClient
   class Core
     API_TOKEN = '4D6(E7{zeeKkfu;'
     API_SECRET_TOKEN = 'password'
-    URL = 'https://heiseirb-demo-api.herokuapp.com'
+    URL = 'https://heiseirb-demo-api.herokuapp.com' || 'http://127.0.0.1:4000'
     HEADRS = {
       'Content-Type' => 'application/json',
           'X-Token' => API_TOKEN,
