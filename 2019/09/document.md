@@ -19,13 +19,13 @@
  5. bin/console # とりあえず動かしてみる
  4. git checkout team/YOUR_TEAM_NAME # 自分用のブランチを切って作業開始
  5. push出来ない場合はgithubに招待してもらう
- 6. readmeはしっかり技術する
+ 6. readmeはしっかり記述する
 
 [api]
  1. git clone git@github.com:heiseirb/event_api.git # gitからcloneする
  2. 環境構築頑張る
  3. git checkout team/YOUR_TEAM_NAME #作業開始
- 4. readmeはしっかり技術する
+ 4. readmeはしっかり記述する
 ```
 
 ## GEM
