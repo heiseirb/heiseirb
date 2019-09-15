@@ -2,7 +2,6 @@ require "heiseirb_api_client/core"
 
 module HeiseirbApiClient
   class Example < Core
-    
     def initialize
       @conn = Faraday.new(url: URL)  do |config|
         config.request :json
