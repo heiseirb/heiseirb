@@ -44,7 +44,7 @@
  - DoS攻撃をしかけてサーバをダウンさせるgemとかとか作るチームいたら嬉しい。ex. HeiseirbApiClient::BreakeDown.execute(10000) #10000RequestのDoS攻撃を仕掛ける
  - http clientとしてfaradayをいれてあります。
 
-## API <= review app作りました！！PR毎に環境作れるようにしたので、欲しい方は田代に言ってください。
+## API <= review app作りました！！PR毎に環境作れるようにしたので、欲しい方は運営に言ってください。
 ### 説明
  - イベント管理が出来る簡単なRails APIです。細かい使用は[ソースコード](https://github.com/heiseirb/event_api)を読んでね
  - テーブル設計
