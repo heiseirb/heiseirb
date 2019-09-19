@@ -33,6 +33,11 @@ HeiseirbApiClient::CRUD::Event.new.post_events(user_id: 136, place: "medpeer", d
 - capacity: only integer. How many people are able to join this event.
 - times: only integer. limited from 1 to 10.
 
+### sakura.rb
+- 任意のEventSchedulesのcapacityを取得
+- 現在の参加人数とcapacityとの差分を出す
+- 差分に満たない人数の分、userをcreateする
+
 ## Development
 
 After checking out the repo, run bin/setup to install dependencies. Then, run rake spec to run the tests. You can also run bin/console for an interactive prompt that will allow you to experiment.
