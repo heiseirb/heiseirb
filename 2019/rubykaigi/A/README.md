@@ -1,7 +1,7 @@
 # 進め方
 1.  A/templateをcopyしてチーム名に置き換え、そこで作業する
 2. minitestをクリアするようにmy_enumerable実装する
-3. heiseirbのリポジトリにPRを提出する。
+3. heiseirbのリポジトリにPRする。
 ```
 make test
 ```
