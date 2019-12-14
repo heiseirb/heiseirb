@@ -13,7 +13,6 @@ class MyEnumerableTest < MiniTest::Test
 
   # https://docs.ruby-lang.org/ja/latest/class/Enumerable.html#I_DETECT
   def test_find
-    skip
     assert_equal (1..100).find { |i| i % 5 == 0 && i % 7 == 0 }, (1..100).my_find { |i| i % 5 == 0 && i % 7 == 0 }
     not_found = -> { 'NOT FOUND' }
     assert_equal (1..100).find(not_found) { |i| i % 5 == 0 && i % 7 == 0 }, (1..100).my_find(not_found) { |i| i % 5 == 0 && i % 7 == 0 }
@@ -22,7 +21,6 @@ class MyEnumerableTest < MiniTest::Test
 
   # https://docs.ruby-lang.org/ja/latest/class/Enumerable.html#I_COLLECT
   def test_map
-    skip
     assert_equal [1, 2, 3].map { |i| i ** 2 }, [1, 2, 3].my_map { |i| i ** 2 }
     assert_equal [1, 2, 3].map(&:to_s), [1, 2, 3].my_map(&:to_s)
   end
