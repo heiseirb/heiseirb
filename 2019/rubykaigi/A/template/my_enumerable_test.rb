@@ -11,7 +11,7 @@ class MyEnumerableTest < MiniTest::Test
     assert_equal each_items, my_each_items
   end
 
-  # https://ref.xaio.jp/ruby/classes/enumerable/find
+  # https://docs.ruby-lang.org/ja/latest/class/Enumerable.html#I_DETECT
   def test_find
     skip
     assert_equal (1..100).find { |i| i % 5 == 0 && i % 7 == 0 }, (1..100).my_find { |i| i % 5 == 0 && i % 7 == 0 }
@@ -20,14 +20,14 @@ class MyEnumerableTest < MiniTest::Test
     assert_equal (1..10).find(not_found) { |i| i % 5 == 0 && i % 7 == 0 }, (1..10).my_find(not_found) { |i| i % 5 == 0 && i % 7 == 0 }
   end
 
-  # https://ref.xaio.jp/ruby/classes/enumerable/collect
+  # https://docs.ruby-lang.org/ja/latest/class/Enumerable.html#I_COLLECT
   def test_map
     skip
     assert_equal [1, 2, 3].map { |i| i ** 2 }, [1, 2, 3].my_map { |i| i ** 2 }
     assert_equal [1, 2, 3].map(&:to_s), [1, 2, 3].my_map(&:to_s)
   end
 
-  # https://ref.xaio.jp/ruby/classes/array/zip
+  # https://docs.ruby-lang.org/ja/latest/class/Array.html#I_ZIP
   def test_zip
     skip
     arr1 = [1, 2, 3]
@@ -46,7 +46,7 @@ class MyEnumerableTest < MiniTest::Test
     assert_equal '・1:4:6・2:5:7・3::8', my_str
   end
 
-  # https://ref.xaio.jp/ruby/classes/enumerable/each_with_object
+  # https://docs.ruby-lang.org/ja/latest/class/Enumerable.html#I_EACH_WITH_OBJECT
   def test_each_with_object
     skip
     assert_equal (1..5).each_with_object([]) { |i, a| a << i * 2 }, (1..5).my_each_with_object([]) { |i, a| a << i * 2 }
