@@ -7,11 +7,13 @@
    - 知識の共有、向上、業界全体の平均レベルアップ、交流
  - 取り組み方手順
    1. チームメンバーに敬意を払いきちんと挨拶する。
-   2. `git clone https://github.com/heiseirb/heiseirb` ※1チームにつき1人でお願いします。
-   3. heiseirb/2019/rubykaigi/A or B/README.md確認。それをよく読んで3人で共闘して課題に挑戦する
-   4. チーム名を決める
-   5. heiseirb/2019/rubykaigi/A or B/templateをcopyして、チーム名に書き換え、そのDirで作業を行う
-   6. 5分前には各コース指定の方法でまとめてPRを作成する。
+   2. https://github.com/heiseirb/heiseirをforkする。 
+   3. `git clone https://github.com/heiseirb/heiseirb` ※1チームにつき1人でお願いします。
+     ※ memberの人は直cloneでおけ
+   4. heiseirb/2019/rubykaigi/A or B/README.md確認。それをよく読んで3人で共闘して課題に挑戦する
+   5. チーム名を決める
+   6. heiseirb/2019/rubykaigi/A or B/templateをcopyして、チーム名に書き換え、そのDirで作業を行う
+   7. 5分前には各コース指定の方法でまとめてPRを作成する。
  - 注意事項
    - マウント取らない！！マウントと議論は別物！
    - PR等は後日何らかの形で公開するかもなので嫌な人は予め言って下さい。
